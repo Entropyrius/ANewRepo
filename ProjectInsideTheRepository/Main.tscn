@@ -17,7 +17,7 @@ albedo_color = Color( 0.745098, 0.611765, 0.0862745, 1 )
 
 [sub_resource type="Curve3D" id=5]
 _data = {
-"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 14.2852, 1.09016, -15.3712, 0, 0, 0, 0, 0, 0, -14.3746, 1.08121, -15.171, 0, 0, 0, 0, 0, 0, -14.1562, 1.01258, 17.2186, 0, 0, 0, 0, 0, 0, 14.0177, 0.991058, 16.7984, 0, 0, 0, 0, 0, 0, 14.2477, 1.09671, -15.4016, 0, 0, 0, 0, 0, 0, 14.2852, 1.09016, -15.3712 ),
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 14.3101, 0.228164, -15.3678, 0, 0, 0, 0, 0, 0, -14.3891, 0.505735, -15.1885, 0, 0, 0, 0, 0, 0, -14.1953, 0.390206, 17.1966, 0, 0, 0, 0, 0, 0, 14.0425, 0.563097, 16.7956, 0, 0, 0, 0, 0, 0, 14.3181, 0.262495, -15.3524, 0, 0, 0, 0, 0, 0, 14.3101, 0.228163, -15.3678 ),
 "tilts": PoolRealArray( 0, 0, 0, 0, 0, 0 )
 }
 
@@ -53,6 +53,7 @@ size = 19.0
 
 [node name="Cylinders" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -15 )
+visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Cylinders"]
 mesh = SubResource( 3 )
@@ -80,7 +81,7 @@ material/0 = SubResource( 4 )
 curve = SubResource( 5 )
 
 [node name="SpawnLocation" type="PathFollow" parent="SpawnPath"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2852, 1.09016, -15.3712 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3101, 0.228164, -15.3678 )
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5

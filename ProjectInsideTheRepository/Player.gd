@@ -7,6 +7,8 @@ export var bounce_impulse = 16
 
 var velocity = Vector3.ZERO
 
+signal hit
+
 func _physics_process(delta):
 	var direction = Vector3.ZERO
 	direction.x=Input.get_action_strength("move_right")-Input.get_action_strength("move_left")
@@ -32,3 +34,10 @@ func _physics_process(delta):
 			if Vector3.UP.dot(collision.normal) > 0.1:
 				mob.squash()
 				velocity.y=bounce_impulse
+
+func die():
+	emit_signal("hit")
+	queue_free()
+
+func _on_MobDetector_body_entered(body):
+	die()

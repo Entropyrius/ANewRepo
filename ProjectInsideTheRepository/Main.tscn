@@ -87,4 +87,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3101, 0.228164, -15.3678 )
 wait_time = 0.5
 autostart = true
 
+[connection signal="hit" from="Player" to="." method="_on_Player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]
